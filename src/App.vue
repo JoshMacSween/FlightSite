@@ -5,17 +5,11 @@
       <router-link to="/about">About</router-link>
     </div>
     <router-view />
-    <FlightList />
   </div>
 </template>
 
 <script>
-import FlightList from '@/components/FlightList.vue';
-  export default {
-    components: {
-      FlightList
-    }
-}
+
 </script>
 
 <style>
