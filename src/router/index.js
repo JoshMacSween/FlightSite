@@ -6,23 +6,26 @@ Vue.use(VueRouter)
 const routes = [
   {
     path: '/',
-    name: 'app',
+    name: 'home',
     component: () => import('../views/Home.vue')
   },
   {
-    path: '/about',
-    name: 'About',
-    component: () => import('../views/About.vue'),
+    path: '/list',
+    name: 'flight-list',
+    props: true,
+    component: () => import('../components/FlightList.vue')
   },
   {
-    path: '/list',
-    name: 'List',
-    component: () => import('../components/FlightList.vue')
+    path: '/flights/:id',
+    name: 'flight-show',
+    props: true,
+    component: () => import('../components/FlightShow.vue')
   }
 ]
 
 const router = new VueRouter({
-  routes,
+  mode: 'history',
+  routes
 })
 
 export default router

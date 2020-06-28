@@ -5,6 +5,7 @@
       <FlightCard
         v-for="flight in flights"
         :key="flight.id"
+        :id="flight.id"
         :title="flight.title"
         :length="flight.length"
       />
