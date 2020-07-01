@@ -2,23 +2,22 @@
   <div>
     <h1>Showing List of Flights</h1>
     <div>
-      <FlightCard v-for="flight in flights" :key="flight.id" :flight="flight" :id="flight.id"
-      :title="flight.title" :length="flight.length"/>
+      <FlightCard v-for="flight in flights" :key="flight.id" :flight="flight" />
       <router-link to="/create">Add a Flight</router-link>
     </div>
   </div>
 </template>
 
 <script>
-import axios from 'axios'
+import FlightService from '@/services/FlightService.js'
 import FlightCard from '@/components/FlightCard.vue'
 export default {
   components: {
-    FlightCard
+    FlightCard,
   },
   data() {
     return {
-      flights: []
+      flights: [],
     }
   },
   methods: {
@@ -27,8 +26,7 @@ export default {
     },
   },
   created() {
-    axios
-      .get('http://localhost:3000/flights')
+    FlightService.getFlights()
       .then((response) => {
         this.flights = response.data
       })
