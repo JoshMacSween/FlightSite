@@ -1,10 +1,12 @@
 <template>
   <div>
-    <router-link :to="{ name: 'flight-show', params: {id: this.id, title: this.title, length: this.length}}">
-    <div class="card" v-on:click="book">
-      <h2>{{ title }}</h2>
-      <p>Length: {{ length }} hours</p>
-    </div>
+    <router-link
+      :to="{ name: 'flight-show', params: {id: this.id, title: this.title, length: this.length}}"
+    >
+      <div class="card">
+        <h2>{{ title }}</h2>
+        <p>Length: {{ length }} hours</p>
+      </div>
     </router-link>
   </div>
 </template>
@@ -14,10 +16,10 @@ export default {
   props: ["id", "title", "length"],
   methods: {
     book() {
-      console.log("test")
+      console.log("test");
     }
   }
-}
+};
 </script>
 
 <style scoped>
