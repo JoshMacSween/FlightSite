@@ -3,11 +3,14 @@
     <h1>Showing List of Flights</h1>
     <div>
       <FlightCard
+        @add-to-flights="updateFlights"
         v-for="flight in flights"
         :key="flight.id"
+        :id="flight.id"
         :title="flight.title"
         :length="flight.length"
       />
+      <router-link to="/create">Add a Flight</router-link>
     </div>
   </div>
 </template>
@@ -38,6 +41,11 @@ export default {
         }
       ]
     };
+  },
+  methods: {
+    updateFlights() {
+      this.flights.push
+    }
   }
 };
 </script>

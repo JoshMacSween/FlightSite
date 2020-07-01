@@ -20,6 +20,11 @@ const routes = [
     name: 'flight-show',
     props: true,
     component: () => import('../components/FlightShow.vue')
+  },
+  {
+    path: '/create',
+    name: 'flight-create',
+    component: () => import('../components/FlightCreate.vue')
   }
 ]
 
