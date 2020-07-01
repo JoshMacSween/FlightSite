@@ -13,4 +13,7 @@ export default {
   getFlights() {
     return apiClient.get('/flights')
   },
+  getFlight(id) {
+    return apiClient.get('/flights/' + id)
+  },
 }

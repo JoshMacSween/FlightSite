@@ -1,17 +1,10 @@
 <template>
-  <div>
-    <router-link
-      :to="{
-        name: 'flight-show',
-        params: { id: flight.id, title: flight.title, length: flight.length },
-      }"
-    >
-      <div class="card">
-        <h2>{{ flight.title }}</h2>
-        <p>Length: {{ flight.length }} hours</p>
-      </div>
-    </router-link>
+<router-link :to="{ name: 'flight-show', params: {id: flight.id} }">
+  <div class="card">
+    <h2>{{ flight.title }}</h2>
+    <p>Length: {{ flight.length }} hours</p>
   </div>
+</router-link>
 </template>
 
 <script>
