@@ -1,11 +1,14 @@
 <template>
   <div>
     <router-link
-      :to="{ name: 'flight-show', params: {id: this.id, title: this.title, length: this.length}}"
+      :to="{
+        name: 'flight-show',
+        params: { id: flight.id, title: flight.title, length: flight.length },
+      }"
     >
       <div class="card">
-        <h2>{{ title }}</h2>
-        <p>Length: {{ length }} hours</p>
+        <h2>{{ flight.title }}</h2>
+        <p>Length: {{ flight.length }} hours</p>
       </div>
     </router-link>
   </div>
@@ -13,13 +16,15 @@
 
 <script>
 export default {
-  props: ["id", "title", "length"],
+  props: {
+    flight: Object,
+  },
   methods: {
     book() {
-      console.log("test");
-    }
-  }
-};
+      console.log('test')
+    },
+  },
+}
 </script>
 
 <style scoped>

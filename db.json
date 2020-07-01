@@ -1,0 +1,19 @@
+{
+  "flights": [
+    {
+      "id": 1,
+      "title": "Edmonton to Toronto",
+      "length": 4.5
+    },
+    {
+      "id": 2,
+      "title": "Vancouver to Montreal",
+      "length": 8
+    },
+    {
+      "id": 3,
+      "title": "Calgary to Las Vegas",
+      "length": 4
+    }
+  ]
+}
