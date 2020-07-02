@@ -1,13 +1,8 @@
 <template>
   <div id="app">
-    <link
-      rel="stylesheet"
-      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
-      integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk"
-      crossorigin="anonymous"
-    />
     <div id="nav">
-      <router-link to="/">Home</router-link>
+      <router-link to="/">Home</router-link> | 
+      <router-link to="/create">Add a Flight</router-link>
     </div>
     <router-view />
   </div>
@@ -15,7 +10,7 @@
 
 <script>
   export default {
-    
+
   }
 </script>
 

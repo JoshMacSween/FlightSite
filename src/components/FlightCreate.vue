@@ -1,27 +1,20 @@
 <template>
   <div class="createCard">
-    <h1>Create a Flight Listing</h1>
-    <form>
-      <div class="form-group">
-        <label for="title">Starting and ending point:</label>
-        <input type="text" class="form-control" id="title">
-        <label for="length">Length of flight:</label>
-        <input type="text" class="form-control" id="length">
-      </div>
-      <button @click="addFlight" type="submit" class="btn btn-primary">Create</button>
-
-    </form>
-
+    <h3>Creating a Flight Listing</h3>
+    <hr>
+    <h3>User no.{{ userId }} {{ userName }}</h3>
+    <span>{{ categories }}</span>
   </div>
 </template>
 
 <script>
+import { mapState } from 'vuex'
   export default {
-    methods: {
-      addFlight() {
-        this.$emit('add-to-flights')
-      }
-    }
+    computed: mapState({
+      userName: state => state.user.name,
+      userId: state => state.user.id,
+      categories: state => state.categories
+    })
   }
 </script>
 

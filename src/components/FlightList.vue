@@ -3,7 +3,6 @@
     <h1>Showing List of Flights</h1>
     <div>
       <FlightCard v-for="flight in flights" :key="flight.id" :flight="flight" />
-      <router-link to="/create">Add a Flight</router-link>
     </div>
   </div>
 </template>
